@@ -23,11 +23,6 @@ public class UserController {
     @Autowired
     UserService attendifyserv;
 
-    @GetMapping("/sample")
-    public String welcome() {
-        return "Welcome to the Manufacturer API!";
-    }
-
 
     @PostMapping("/createUser")
     public UserEntity createUser(@RequestBody UserEntity s) {
