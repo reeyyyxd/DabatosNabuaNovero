@@ -61,7 +61,6 @@ public class AttendRecEntity {
         this.date = date;
     }
     
-
     public int getId() {
         return id;
     }
