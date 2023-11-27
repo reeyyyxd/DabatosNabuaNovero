@@ -8,30 +8,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tblattendance")
+@Table(name="tblattendance")
 public class AttendRecEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "recID")
+    @Column(name="recID")
     private int id;
 
-    @Column(name = "Id")
+    @Column(name="Id")
     private Long studentId;
 
-    @Column(name = "FirstName")
+    @Column(name="FirstName")
     private String firstName;
 
-    @Column(name = "LastName")
+    @Column(name="LastName")
     private String lastName;
 
-    @Column(name = "Year")
-    private String year;
+    @Column(name="Year")
+    private int year;
 
-    @Column(name = "Course")
+    @Column(name="Course")
     private String course;
 
-    @Column(name = "Present")
+    @Column(name ="Present")
     private int num1;
 
     @Column(name = "Absent")
@@ -40,16 +40,15 @@ public class AttendRecEntity {
     @Column(name = "Late")
     private int num3;
 
-    @Column(name = "Date")
+    @Column(name="Date")
     private String date;
 
-    public AttendRecEntity() {
-       super();
-    }
-
-    public AttendRecEntity(Long studentId, String firstName, String lastName, String year, String course,
-                           int num1, int num2, int num3, String date) {
+    public AttendRecEntity(){
         super();
+    }
+    public AttendRecEntity(int id, Long studentId, String firstName, String lastName, int year, String course, int num1, int num2, int num3, String date) {
+        super();
+        this.id = id;
         this.studentId = studentId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -60,7 +59,10 @@ public class AttendRecEntity {
         this.num3 = num3;
         this.date = date;
     }
-    
+
+ 
+
+
     public int getId() {
         return id;
     }
@@ -93,11 +95,11 @@ public class AttendRecEntity {
         this.lastName = lastName;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
