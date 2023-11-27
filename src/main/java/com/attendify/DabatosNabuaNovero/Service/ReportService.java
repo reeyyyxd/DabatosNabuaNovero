@@ -21,8 +21,9 @@ public class ReportService {
     public ReportEntity updateReport(Long id, ReportEntity newReportDetails) {
         ReportEntity reportt = new ReportEntity();
         try {
+            // Find the existing report by id
             reportt = portrepo.findById(id).get();
-
+             // Update the report status with the new details
             reportt.setStatus(newReportDetails.getEventname());
 
 

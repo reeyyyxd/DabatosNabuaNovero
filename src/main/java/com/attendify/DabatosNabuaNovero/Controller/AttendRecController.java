@@ -20,14 +20,14 @@ public class AttendRecController {
     @Autowired
     AttendRecService attserv;
 
-    // task 2
+    // task 2  Retrieve all attendance records
     @GetMapping("/getallrecords")
     // readData
     public List<AttendRecEntity> getAllAttendanceRecords() {
         return attserv.getAllAttendanceRecords();
     }
 
-    // task 3
+    // task 3 Insert a new attendance record
     @PostMapping("/insertrecord")
     // insertData
     public AttendRecEntity insertRecord(@RequestBody AttendRecEntity record) {
