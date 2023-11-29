@@ -1,10 +1,6 @@
 package com.attendify.DabatosNabuaNovero.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tblemployee")
@@ -14,6 +10,8 @@ public class EmployeeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    //gi butang nkog column ky mo duplicate and di mo run
+    @Column(name="idnumber")
     private String idNumber;
     private String firstname;
     private String lastname;
@@ -32,6 +30,7 @@ public class EmployeeEntity {
         this.lastname = lastname;
         this.email = email;
         this.department = department;
+        this.isStudent=false;
     }
 
     public int getId(){

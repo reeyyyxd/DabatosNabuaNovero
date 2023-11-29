@@ -7,13 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+//change the  var and data types
 @Entity
 @Table(name="tblattendance")
 public class AttendRecEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="recID")
+
     private int id;
 
     @Column(name="Id")
