@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="tblemployee")
+@Table(name="tblstudent")
 
 
 public class StudentEntity {
@@ -34,7 +34,7 @@ public class StudentEntity {
 
 
 	@Column(name = "isStudent")
-	private boolean isSSG = false;
+	private String isSSG;
 
 
 	//empty constructor
@@ -43,14 +43,14 @@ public class StudentEntity {
 	}
 
 	//constructor
-	public StudentEntity(int id, String idNumber, String firstname, String lastname, String email) {
+	public StudentEntity(int id, String idNumber, String firstname, String lastname, String email, String isSSG) {
 		super();
 		this.id = id;
 		this.idNumber= idNumber;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
-		this.isSSG = false;
+		this.isSSG = isSSG;
 	}
 
 	//getters and setters
@@ -78,10 +78,10 @@ public class StudentEntity {
 		this.lastname = lastname;
 	}
 
-	public void setSSG(boolean isStudent) {
-		this.isSSG = isStudent;
+	public void setIsSSG(String isSSG) {
+		this.isSSG = isSSG;
 	}
-	public boolean isSSG() {
+	public String getIsSSG() {
 		return isSSG;
 	}
 

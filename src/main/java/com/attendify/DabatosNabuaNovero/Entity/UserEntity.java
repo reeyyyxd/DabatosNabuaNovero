@@ -32,10 +32,10 @@ public class UserEntity {
     private String password;
 
     @Column(name = "isStudent")
-    private boolean isStudent = false;
+    private String isStudent;
 
     @Column(name = "isEmployee")
-    private boolean isEmployee = false;
+    private String isEmployee;
 
 
     public UserEntity() {
@@ -43,7 +43,7 @@ public class UserEntity {
     }
 
     public UserEntity(int id, String idNumber, String firstname, String lastname, String email,
-                      String password) {
+                      String password, String isStudent, String isEmployee) {
         super();
         this.id = id;
         this.idNumber = idNumber;
@@ -51,8 +51,8 @@ public class UserEntity {
         this.lastname = lastname;
         this.email = email;
         this.password = password;
-        this.isStudent = false;
-        this.isEmployee = false;
+        this.isStudent = isStudent;
+        this.isEmployee = isEmployee;
     }
 
     public int getId() {
@@ -103,19 +103,19 @@ public class UserEntity {
         this.password = password;
     }
 
-    public boolean isStudent() {
+    public String getIsStudent() {
         return isStudent;
     }
 
-    public void setStudent(boolean isStudent) {
+    public void setIsStudent(String isStudent) {
         this.isStudent = isStudent;
     }
 
-    public boolean isEmployee() {
+    public String getIsEmployee() {
         return isEmployee;
     }
 
-    public void setEmployee(boolean isEmployee) {
+    public void setIsEmployee(String isEmployee) {
         this.isEmployee = isEmployee;
     }
 

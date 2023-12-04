@@ -18,7 +18,7 @@ public class AttendRecEntity {
 
     private int id;
 
-    @Column(name="Id")
+    @Column(name="studId")
     private Long studentId;
 
     @Column(name="FirstName")

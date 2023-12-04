@@ -3,11 +3,11 @@ package com.attendify.DabatosNabuaNovero.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import com.attendify.DabatosNabuaNovero.Entity.ReportEntity;
+import com.attendify.DabatosNabuaNovero.Repository.ReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.attendify.DabatosNabuaNovero.Entity.ReportEntity;
-import com.attendify.DabatosNabuaNovero.Repository.ReportRepository;
 
 @Service
 public class ReportService {

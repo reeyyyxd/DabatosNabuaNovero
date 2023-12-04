@@ -14,49 +14,49 @@ public class ReportEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "StudentId")
-    private Long Studid;
+    private Long studentid;
     @Column(name = "Date")
-    private String Date;
+    private String date;
     @Column(name = "Status")
-    private String Status;
+    private String status;
     @Column(name = "EventName")
-    private String Eventname;
+    private String eventname;
 
 
 
-    public ReportEntity(Long studid, String date, String status, String eventname) {
-        Studid = studid;
-        Date = date;
-        Status = status;
-        Eventname = eventname;
+    public ReportEntity(Long studentid, String date, String status, String eventname) {
+        this.studentid = studentid;
+        this.date = date;
+        this.status = status;
+        this.eventname = eventname;
     }
 
     public ReportEntity() {
     }
 
-    public Long getStudid() {
-        return Studid;
+    public Long getStudentid() {
+        return studentid;
     }
-    public void setStudid(Long studid) {
-        Studid = studid;
+    public void setStudentid(Long studentid) {
+        this.studentid = studentid;
     }
     public String getDate() {
-        return Date;
+        return date;
     }
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
     public String getStatus() {
-        return Status;
+        return status;
     }
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
     public String getEventname() {
-        return Eventname;
+        return eventname;
     }
     public void setEventname(String eventname) {
-        Eventname = eventname;
+        this.eventname = eventname;
     }
 
 

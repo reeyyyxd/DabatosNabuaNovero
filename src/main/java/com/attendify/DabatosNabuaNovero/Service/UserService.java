@@ -39,8 +39,10 @@ public class UserService {
             s.setLastname(newUser.getLastname());
             s.setEmail(newUser.getEmail());
             s.setPassword(newUser.getPassword());
-            s.setStudent(newUser.isStudent());
-            s.setEmployee(newUser.isEmployee());
+            s.setIsStudent(newUser.getIsStudent());
+            s.setIsEmployee(newUser.getIsEmployee());
+
+
         }
         catch(NoSuchElementException ex){
             throw new NoSuchElementException("Manufacturer "+ id + " not found");

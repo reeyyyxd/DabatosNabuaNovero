@@ -39,7 +39,7 @@ public class StudentService{
 			student.setFirstname(newStudentDetails.getFirstname());	
 			student.setLastname(newStudentDetails.getLastname());
 			student.setEmail(newStudentDetails.getEmail());
-			student.setSSG(newStudentDetails.isSSG());
+			student.setIsSSG(newStudentDetails.getIsSSG());
 
 
 
@@ -61,7 +61,6 @@ public class StudentService{
 		}
 		else {
 			return "Student ID " + id + " not found";
-					
 
 		}
 		
