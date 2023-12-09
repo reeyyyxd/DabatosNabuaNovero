@@ -9,7 +9,7 @@ import com.attendify.DabatosNabuaNovero.Service.ReportService;
 
 @RestController
 @RequestMapping("/Report")
-@CrossOrigin
+
 public class ReportController {
     @Autowired
     ReportService repserv;
